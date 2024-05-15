@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-width: 600px;
+    
+    width: 800px; /* Fixed width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    
+    height: 300px;
+    width: 330px; /* Fill the width of the container */
+    max-width: 100%; /* Ensure the game board doesn't exceed the container width */
+    display: grid;
+    grid-template-columns: repeat(7, 40px); /* 7 columns, each 40px wide */
+    grid-template-rows: repeat(6, 40px); /* 6 rows, each 40px tall */
+    gap: 5px; /* Gap between cells */
+    border: 1px solid #333; /* Border for game board */
+    padding: 0; /* Remove padding */
+    background-color: #218c74; /* Background color of game board */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+
+.cell {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff; /* Default color of cells */
+    border: 1px solid #ccc; /* Border for cells */
+    cursor: pointer;
+}
+
+.cell.red {
+    background-color: red; /* Red color for cells with class 'red' */
+}
+
+.cell.yellow {
+    background-color: yellow; /* Yellow color for cells with class 'yellow' */
+}
+
+.cell:hover {
+    background-color: #eee; /* Light gray on hover */
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    .game-board {
+        width: 100%; /* Fill the width of the adjusted container */
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+}
